@@ -1,0 +1,85 @@
+<%-include('header')-%>
+            <!-- HEADER DESKTOP-->
+            <!-- MAIN CONTENT-->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                    <div class="page-header" style="margin-bottom:30px; margin-right:30px">
+                            <h3 class="page-title" style="margin-left:200px;padding-top:20px">
+                            <b>Product Edit Form</b>
+                            </h3>
+                            <a href="/customer/data_display" ><img src="/images/icons/back.png" width="30px" style="margin-left: 20px;margin-top: 20px; margin-bottom: 20px" title="back"alt="back"></a>
+                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Product Edit Form</h4>
+                        <form method="POST" id="uploadform" ref='uploadform' enctype="multipart/form-data">
+                            <label for="Product_id" class=" form-control-label">Product_Id</label>
+                            <input type="text" placeholder="Enter Product id" name="Product_id" value="<%=product_array.Product_id %>"  class="form-control">
+
+                            <label for="Pro_name" class=" form-control-label">Product Name</label>
+                            <input type="text" placeholder="Enter Product Name" name="Pro_name"class="form-control" value="<%=product_array.Pro_name %>">
+
+                            <label for="Product_image" class=" form-control-label">Product_Image</label>
+                            <img name="past_image"  src="/Pro_upload/<%=product_array.Pro_image%>" width="100px"alt="img">
+                            <input type="file" name="Pro_image" class="form-control">
+                            <input type="text" value="<%=product_array.Pro_image%>" name="past_image" class="form-control" hidden>
+
+                            <label for="Pro_quantity" class=" form-control-label">Product Quantity</label>
+                            <input type="Number" placeholder="Enter Product Quantity" name="Pro_quantity" class="form-control" value="<%=product_array.Pro_quantity %>">
+
+                            <label for="Pro_rentprice" class=" form-control-label">Product Rentprice</label>
+                            <input type="Number" placeholder="Enter Product Rent Price" name="Pro_rentprice" class="form-control" value="<%=product_array.Pro_rentprice %>">
+
+                            <label for="Pro_ammount" class=" form-control-label">Product Amount</label>
+                            <input type="Number" placeholder="Enter Product Amount " name="Pro_ammount" class="form-control" value="<%=product_array.Pro_ammount %>">
+
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button type="reset" class="btn btn-danger btn-sm">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                            
+                            </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+        </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/vendors/js/vendor.bundle.base.js"></script>
+    <script src="/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/js/off-canvas.js"></script>
+    <script src="/js/hoverable-collapse.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="/js/form-validation.js"></script>
+    <script src="/js/bt-maxLength.js"></script>
+    <!-- End custom js for this page-->
+    </body>
+    
+    
+    <!-- Mirrored from www.urbanui.com/gleam/pages/forms/validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:19 GMT -->
+    </html>

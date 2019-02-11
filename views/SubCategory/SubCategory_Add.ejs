@@ -1,0 +1,67 @@
+<%-include('header')-%>
+<div class="main-panel">
+    <div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">SubCategory Form</h4>
+            <form action="subcate_process" method="POST">
+                    <label for="SubCategory_id" class=" form-control-label">SubCategory_id</label>
+                    <input type="text" placeholder="Enter SubCategory_Id" name="subcate_id" class="form-control">
+                
+                    <label for="SubCategory_name" class=" form-control-label">SUbCategory_name</label>
+                    <input type="text" placeholder="Enter Category_Name" name="subcate_name" class="form-control">
+                    <div class="card-body card-block" style="right:165px">
+                        <lable>Which Category Product You have?</lable>
+                                    <select  name="_category">
+                                    <% for(var i=0;i<category_array.length;i++) { %>
+                                    <option  name="" value="<%= category_array[i]._id%>"><%=  category_array[i].cate_name  %> </option>
+                                    <%  } %>
+                                    </select>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                        </button>
+                        </div>
+                </form>
+             </div>
+             </div>
+         </div>
+     </div>
+ </div>
+     <!-- content-wrapper ends -->
+     <!-- partial:../../partials/_footer.html -->
+     <footer class="footer">
+ <div class="d-sm-flex justify-content-center justify-content-sm-between">
+         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+ </div>
+     </footer>
+     <!-- partial -->
+ </div>
+ <!-- main-panel ends -->
+ </div>
+ <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="/vendors/js/vendor.bundle.base.js"></script>
+<script src="/vendors/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="/js/off-canvas.js"></script>
+<script src="/js/hoverable-collapse.js"></script>
+<script src="/js/misc.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="/js/form-validation.js"></script>
+<script src="/js/bt-maxLength.js"></script>
+<!-- End custom js for this page-->
+</body>
+<!-- Mirrored from www.urbanui.com/gleam/pages/forms/validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:19 GMT -->
+</html>

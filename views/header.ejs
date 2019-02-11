@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/gleam/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:22:12 GMT -->
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent Admin</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="/vendors/css/vendor.bundle.addons.css">
+<!-- endinject -->
+<!-- plugin css for this page -->
+<!-- End plugin css for this page -->
+<!-- inject:css -->
+<link rel="stylesheet" href="/css/style.css">
+<!-- endinject -->
+<link rel="shortcut icon" href="/Rentpe-Icon.png" />
+</head>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo"  href="/"><img style="width: 200px; height:50px" src="/final_logo.jpg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini"  href="/"><img style="width: 50px; height:50px" src="/Rentpe-Icon.png" alt="logo"/></a>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+        <span class="mdi mdi-menu"></span>
+        </button>
+        <span class="d-none d-md-inline">Admin Dashboard</span>
+        <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item nav-profile">
+            <a class="nav-link">
+            <div class="nav-profile-text">
+                <p class="mb-0">Shrey soni</p>
+            </div>
+            <div class="nav-profile-img">
+                <img src="/Rentpe-Icon.png" alt="logo">
+            </div>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+            <i class="mdi mdi-bell-outline"></i>
+            <span class="count-symbol bg-info"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                <div class="preview-icon bg-success">
+                    <i class="mdi mdi-calendar"></i>
+                </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                    <p class="text-gray ellipsis mb-0">
+                    Just a reminder that you have an event today
+                  </p>
+                </div>
+            </a>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="mdi mdi-settings"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                <p class="text-gray ellipsis mb-0">
+                    Update dashboard
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="mdi mdi-link-variant"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                  <p class="text-gray ellipsis mb-0">
+                    New admin wow!
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+            </div>
+          </li>
+          <li class="nav-item nav-logout d-none d-lg-block">
+            <a class="nav-link" href="/logout">
+              Logout
+              <i class="mdi mdi-power"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div id="settings-trigger"><i class="mdi mdi-format-color-fill"></i></div>
+      <div id="theme-settings" class="settings-panel">
+        <i class="settings-close mdi mdi-close"></i>
+        <p class="settings-heading">SIDEBAR SKINS</p>
+        <div class="sidebar-bg-options selected" id="sidebar-default-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Default</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER SKINS</p>
+        <div class="color-tiles mx-0 px-4">
+        <div class="tiles primary"></div>
+        <div class="tiles success"></div>
+        <div class="tiles warning"></div>
+        <div class="tiles danger"></div>
+        <div class="tiles info"></div>
+        <div class="tiles dark"></div>
+        <div class="tiles default light"></div>
+        </div>
+    </div>
+    <!-- partial -->
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <li class="nav-item nav-profile">
+            <span class="nav-link">
+            <img src="/Rentpe-Icon.png" alt="image"/>
+            <span class="nav-profile-text">RentPe</span>
+            </span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/dashboard">
+            <i class="mdi mdi-home-outline menu-icon"></i>              
+            <span class="menu-title">Dashboard</span>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
+            <i class="mdi mdi mdi-file-outline menu-icon"></i>              
+            <span class="menu-title">Add Data</span>
+            <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="forms">
+                <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/admin/registration">Admin</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/customer/registration">Customer</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/product/add_product">Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/category/add_category">Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/subcategory/add_subcategory">SubCategory</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/inquery/registration">Inquery</a></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                <i class="mdi mdi-table menu-icon"></i>              
+                <span class="menu-title">Tables</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/admin/data_display">Admin</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/customer/data_display">Customer</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/product/data_display">Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/category/data_display">Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/subcategory/data_display">SubCategory</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/inquery/data_display">Inquery</a></li>
+            </ul>
+            </div>
+        </li>
+            <span class="nav">
+                &copy;RentPe
+            </span>
+          </li>
+        </ul>
+</nav>

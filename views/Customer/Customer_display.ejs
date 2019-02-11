@@ -1,0 +1,75 @@
+<%-include('header')-%>
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title" style="margin-left:200px;padding-top:20px">
+          <b>Customer Table</b>
+        </h3>
+        <a href="/customer/registration"><button style=" margin-top: 20px;margin-right: 100px"class="btn btn-rounded btn-fw btn-gradient-primary btn-fw">Add New</button> </a>
+        </div>
+        <div class="col-lg-12 stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                    <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>id</th>        
+                                    <th>name</th>      
+                                    <th>contact_no</th>
+                                    <th>email</th>          
+                                    <th>gender</th>    
+                                    <th>password</th>  
+                                    <th>Action</th>  
+                            
+                                </tr>
+                            </thead>
+                            <% if(customer_array.length>0)  { %>
+                            <tbody>
+                                <%  for(var i=0;i<customer_array.length;i++)  { %>
+                                <tr>
+                                    <td><%=i+1  %></td>
+                                    <td><%=customer_array[i].Customer_id %></td>
+                                    <td><%=customer_array[i].Customer_name %></td>
+                                    <td><%=customer_array[i].Customer_contact_no        %></td>
+                                    <td><%=customer_array[i].Customer_email %></td>
+                                    <td><%=customer_array[i].Customer_gender%></td>
+                                    <td><%=customer_array[i].Customer_password%></td>
+                                    <td>
+                                            <a href="show/<%=customer_array[i]._id%>"><img title="show" src="/images/icons/show.png"></a>
+                                            <a href="edit/<%=customer_array[i]._id%>"><img title="edit" src="/images/icons/edit.png"></a>
+                                            <a href="delete/<%=customer_array[i]._id%>"><img title="delete" src="/images/icons/delete.png"></a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                                <%  }   else    {%>
+                                    <h2>No Records Found</h2>
+                                    <%  }   %>
+                            </tbody>
+                        </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../../vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/misc.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/gleam/pages/tables/basic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:35 GMT -->
+</html>

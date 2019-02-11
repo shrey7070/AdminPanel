@@ -1,0 +1,64 @@
+<%-include('header')-%>
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title" style="margin-left:200px;padding-top:20px">
+          <b>Category Table</b>
+        </h3>
+        <a href="/category/add_category"><button style=" margin-top: 20px;margin-right: 100px"class="btn btn-rounded btn-fw btn-gradient-primary btn-fw">Add New</button> </a>
+        </div>
+        <div class="col-lg-12 stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                            <thead>
+                                    <th>Index</th>
+                                    <th>Category_id</th>        
+                                    <th>Category_name</th>       
+                                    <th>Action</th>  
+                            </thead>
+                            <% if(category_array.length>0)  { %>
+                            <tbody>
+                                <%  for(var i=0;i<category_array.length;i++)  { %>
+                                <tr>
+                                    <td><%=i+1  %></td>
+                                    <td><%=category_array[i].cate_id %></td>
+                                    <td><%=category_array[i].cate_name %></td>
+                                    <td>
+                                            <a href="show/<%=category_array[i]._id%>"> <img title="show" src="/images/icons/show.png"> </a>
+                                            <a href="edit/<%=category_array[i]._id%>"><img title="edit" src="/images/icons/edit.png"></a>
+                                            <a href="delete/<%=category_array[i]._id%>"><img title="delete" src="/images/icons/delete.png"></a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                                <%  }   else    {%>
+                                    <h2>No Records Found</h2>
+                                    <%  }   %>
+                            </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../../vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/misc.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- End custom js for this page-->
+  </body>
+  
+  
+  <!-- Mirrored from www.urbanui.com/gleam/pages/tables/basic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:35 GMT -->
+  </html>

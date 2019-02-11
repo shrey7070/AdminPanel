@@ -1,0 +1,541 @@
+<%-include('header')-%>
+
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title">
+          Dashboard
+          <span class="ml-2 h6 font-weight-normal">Do big things with Gleam, the responsive bootstrap 4 admin template.</span>
+        </h3>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-danger border-0 text-white p-3">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <i class="mdi"></i>
+                <div class="ml-4">
+                  <a style="color: white" class="nav-link"href="/customer/data_display">
+                  <h2 class="mb-2"><%=customer_array.length %></h2>
+                  <h4 class="mb-0">Total Customers</h4>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-info border-0 text-white p-3">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <i class="mdi mdi-cards-outline mdi-48px"></i>
+                <div class="ml-4">
+                  <h2 class="mb-2"><%=category_array.length %></h2>
+                  <h4 class="mb-0">Total Category</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-success border-0 text-white p-3">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <i class="mdi mdi-chart-line mdi-48px"></i>
+                <div class="ml-4">
+                  <h2 class="mb-2">83,900</h2>
+                  <h4 class="mb-0">Total Visit</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="row flex-grow-1 w-100">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <div class="d-flex mb-3 align-items-center">
+                    <h3 class="mb-0">14,0000</h3>
+                    <span class="ml-auto">Overall Sales</span>
+                  </div>
+                  <div class="progress progress-sm">
+                    <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="35" style="width: 35%" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p class="mb-0 mt-3">42% higher than last month</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <div class="d-flex mb-3 align-items-center">
+                    <h3 class="mb-0">34,789</h3>
+                    <span class="ml-auto">Active installations</span>
+                  </div>
+                  <div class="progress progress-sm">
+                    <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="76" style="width: 76%" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p class="mb-0 mt-3">76% higher than last month</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <div class="d-flex mb-3 align-items-center">
+                    <h3 class="mb-0">46,567</h3>
+                    <span class="ml-auto">Total downloads</span>
+                  </div>
+                  <div class="progress progress-sm">
+                    <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="76" style="width: 76%" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p class="mb-0 mt-3">76% higher than last month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 d-flex grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body d-flex flex-column">
+              <div class="d-block d-lg-flex justify-content-between">
+                <h4 class="card-title">Statistics</h4>                    
+                <ul class="nav nav-pills nav-pills-primary border-bottom-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Month</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Week</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">All Time</a>
+                  </li>
+                </ul>
+              </div>
+              <canvas id="earning-chart" class="mt-auto"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 d-flex align-items-stretch">
+          <div class="row flex-grow-1 w-100">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">New Candidates</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>
+                            Select
+                          </th>
+                          <th>
+                            Candidate Name
+                          </th>
+                          <th>
+                            Candidate ID
+                          </th>
+                          <th>
+                            Stream
+                          </th>
+                          <th>
+                            Eligibility
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <img src="images/faces/face12.jpg" alt="image" class="img-sm rounded-circle mr-2"/>
+                            Gary Edison
+                          </td>
+                          <td>
+                            80363477
+                          </td>
+                          <td>
+                            Development
+                          </td>
+                          <td>
+                            <label class="badge badge-outline-success">Accepted</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="img-sm rounded-circle mr-2"/>
+                            Watt Mark
+                          </td>
+                          <td>
+                            80363477
+                          </td>
+                          <td>
+                            Data analysis
+                          </td>
+                          <td>
+                            <label class="badge badge-outline-danger">Rejected</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" checked>
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <img src="images/faces/face12.jpg" alt="image" class="img-sm rounded-circle mr-2"/>
+                            James Disney
+                          </td>
+                          <td>
+                            80363477
+                          </td>
+                          <td>
+                            Designing
+                          </td>
+                          <td>
+                            <label class="badge badge-outline-warning">On hold</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <img src="images/faces/face2.jpg" alt="image" class="img-sm rounded-circle mr-2"/>
+                            Genelia Perkins
+                          </td>
+                          <td>
+                            80363477
+                          </td>
+                          <td>
+                            Testing
+                          </td>
+                          <td>
+                            <label class="badge badge-outline-success">Accepted</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <img src="images/faces/face9.jpg" alt="image" class="img-sm rounded-circle mr-2"/>
+                            Jay Morgan
+                          </td>
+                          <td>
+                            80363477
+                          </td>
+                          <td>
+                            Development
+                          </td>
+                          <td>
+                            <label class="badge badge-outline-warning">On hold</label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card card-weather bg-gradient-primary text-white">
+                <div class="card-body">
+                  <div class="d-flex mb-4">
+                    <h4 class="card-title text-white mb-0">New York</h4>
+                    <span class="ml-auto">Sky is clear</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="weather-daily">
+                      <p class="weather-day">SUN</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">81</p>
+                    </div>
+                    <div class="weather-daily">
+                      <p class="weather-day">MON</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">77</p>
+                    </div>
+                    <div class="weather-daily">
+                      <p class="weather-day">TUE</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">49</p>
+                    </div>
+                    <div class="weather-daily">
+                      <p class="weather-day">WED</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">87</p>
+                    </div>
+                    <div class="weather-daily today">
+                      <p class="weather-day">THU</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">81</p>
+                    </div>
+                    <div class="weather-daily">
+                      <p class="weather-day">FRI</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">74</p>
+                    </div>
+                    <div class="weather-daily">
+                      <p class="weather-day">SAT</p>
+                      <i class="mdi mdi-weather-fog"></i>
+                      <p class="weather-temp">68</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title clearfix">Tickets
+                    <span class="float-right text-primary text-small">
+                      view all
+                    </span>
+                  </h4>
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="form-check my-0">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                      </label>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6>
+                        Summarize the points in meeting
+                      </h6>
+                      <p class="text-muted mb-0">Due on 12 am 27 Jun, 2018</p>
+                    </div>
+                    <div class="ml-auto">
+                      <label class="badge badge-gradient-danger">High</label>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="form-check my-0">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" checked>
+                      </label>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6>
+                        Renew the network plans
+                      </h6>
+                      <p class="text-muted mb-0">Due on 6 am 28 Jun, 2018</p>
+                    </div>
+                    <div class="ml-auto">
+                      <label class="badge badge-gradient-warning">Low</label>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="form-check my-0">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                      </label>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6>
+                        Plan project release date
+                      </h6>
+                      <p class="text-muted mb-0">Due 0n 5 pm 29 Jun, 2018</p>
+                    </div>
+                    <div class="ml-auto">
+                      <label class="badge badge-gradient-danger">High</label>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="form-check my-0">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                      </label>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6>
+                        Review the new app
+                      </h6>
+                      <p class="text-muted mb-0">Due 0n 3 pm 25 Jun, 2018</p>
+                    </div>
+                    <div class="ml-auto">
+                      <label class="badge badge-gradient-info">Medium</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="row flex-grow-1 w-100">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-lg-flex align-items-center text-center text-lg-left">
+                    <img src="images/faces/face15.jpg" class="img-lg rounded-circle mr-lg-4 mb-3 mb-lg-0" alt="image"/>
+                    <div>
+                      <p class="text-small mb-2">YOUR CONTACT</p>
+                      <h5>Ernest Estrada</h5>
+                      <p class="font-weight-light mb-0">Managing Director</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 d-flex">
+                    <div class="text-center border-right flex-grow-1 py-3">
+                      <i class="mdi mdi-chart-bar text-danger icon-md"></i>
+                    </div>
+                    <div class="text-center flex-grow-1 py-3">
+                      <i class="mdi mdi-comment-text-outline text-info icon-md"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">My Tasks</h4>
+                  <p class="text-muted">27 Jul 2018</p>
+                  <ul class="gradient-bullet-list">
+                    <li>
+                      <p>New Dashboard
+                        <span class="float-right text-muted">11 pm</span>
+                      </p>
+                      <p class="text-small text-muted mb-0">Design</p>
+                    </li>
+                    <li>
+                      <p>App Review
+                        <span class="float-right text-muted">05 pm</span>
+                      </p>
+                      <p class="text-small text-muted mb-0">Testing</p>
+                    </li>
+                    <li>
+                      <p>New Joinees
+                        <span class="float-right text-muted">04 pm</span>
+                      </p>
+                      <p class="text-small text-muted">Recruitment</p>
+                      <div class="d-flex">
+                        <img src="images/faces/face16.jpg" alt="image" class="img-xs rounded-circle mr-1 mr-lg-3"/>
+                        <img src="images/faces/face4.jpg" alt="image" class="img-xs rounded-circle mr-1 mr-lg-3"/>
+                        <img src="images/faces/face9.jpg" alt="image" class="img-xs rounded-circle mr-1 mr-lg-3"/>                                                        
+                      </div>
+                    </li>
+                    <li>
+                      <p>Blog Editing
+                        <span class="float-right text-muted">06 pm</span>
+                      </p>
+                      <p class="text-small text-muted mb-0">Research</p>
+                    </li>
+                    <li>
+                      <p>New Estimate
+                        <span class="float-right text-muted">10 am</span>
+                      </p>
+                      <p class="text-small text-muted mb-0">Finance</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Notifications</h4>
+                  <div class="d-flex py-4 border-bottom">
+                    <div class="mr-3 bg-gradient-success icon-in-bg rounded-circle text-white">
+                      <i class="mdi mdi-mouse-off"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-2">You got 10 views</h6>
+                      <p class="text-muted mb-0">10 hrs ago</p>
+                    </div>
+                  </div>
+                  <div class="d-flex py-4 border-bottom">
+                    <div class="mr-3 bg-gradient-info icon-in-bg rounded-circle text-white">
+                      <i class="mdi mdi-database"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-2">Boost your performance</h6>
+                      <p class="text-muted mb-0">4 hrs ago</p>
+                    </div>
+                  </div>
+                  <div class="d-flex py-4">
+                    <div class="mr-3 bg-gradient-danger icon-in-bg rounded-circle text-white">
+                      <i class="mdi mdi-alert"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-2">Subscription ends today</h6>
+                      <p class="text-muted mb-0">2 hrs ago</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright � 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+      </div>
+    </footer>
+    <!-- partial -->
+  </div>
+  <!-- main-panel ends -->
+</div>
+<!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="/vendors/js/vendor.bundle.base.js"></script>
+<script src="/vendors/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="/js/off-canvas.js"></script>
+<script src="/js/hoverable-collapse.js"></script>
+<script src="/js/misc.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="/js/dashboard.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/gleam/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:22:51 GMT -->
+</html>

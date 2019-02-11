@@ -1,0 +1,59 @@
+<%-include('header')-%>
+            <!-- HEADER DESKTOP-->   
+            <!-- MAIN CONTENT-->
+<div class="main-content">
+                <div class="section__content section__content--p30">
+                        <a href="/customer/data_display" ><img src="/images/icons/back.png" width="20px" style="margin-left: 20px;margin-top: 20px; margin-bottom: 20px" title="back"alt="back"></a>
+                    <div class="container-fluid">
+                            <div class="row">
+                                    <div class="table-responsive m-b-40">
+                                            <table class="table table-bordered table-data">
+                                                    <tr>
+                                                        <td>Product id</td>
+                                                        <td><%=product_array.Product_id%></td>
+                                                    </tr>
+                                                    <tr>    
+                                                        <td>Product Name</td>
+                                                        <td><%=product_array.Pro_name%></td>
+                                                    </tr>    
+                                                    <tr>
+                                                        <td>Product Quantity</td>
+                                                        <td><%=product_array.Pro_quantity%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Product Image</td>
+                                                        <td><img width="100px" src="/Pro_upload/<%=product_array.Pro_image %>"> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Product Date</td>
+                                                        <td><%=product_array.Pro_date%></td>
+                                                    </tr>
+                                                    <tr>    
+                                                        <td>Product Rentprice</td>
+                                                        <td><%=product_array.Pro_rentprice%></td>
+                                                    <tr>    
+                                                        <td>Product Amount</td>
+                                                        <td><%=product_array.Pro_ammount%></td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                        </div>
+                    </div>  
+                </div>     
+            </div>
+        </div>
+    </div>
+     <!-- plugins:js -->
+  <script src="/vendors/js/vendor.bundle.base.js"></script>
+  <script src="/vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="/js/off-canvas.js"></script>
+  <script src="/js/hoverable-collapse.js"></script>
+  <script src="/js/misc.js"></script>
+  <script src="/js/settings.js"></script>
+  <script src="/js/todolist.js"></script>
+  <!-- endinject -->
+</body>
+<!-- Mirrored from www.urbanui.com/gleam/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:39 GMT -->
+</html>

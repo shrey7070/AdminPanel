@@ -1,0 +1,74 @@
+<%-include('header')-%>
+           <!-- MAIN CONTENT-->
+           <div class="main-panel">
+            <div class="content-wrapper">
+                    <div class="page-header" style="margin-bottom:30px; margin-right:30px">
+                            <h3 class="page-title" style="margin-left:200px;padding-top:20px">
+                            <b>Inquery Edit Form</b>
+                            </h3>
+                            <a href="/customer/data_display" ><img src="/images/icons/back.png" width="30px" style="margin-left: 20px;margin-top: 20px; margin-bottom: 20px" title="back"alt="back"></a>
+                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Customer Edit Form</h4>
+                        <form method="POST">
+                            <label for="inq_id" class=" form-control-label">inquery Id</label>
+                            <input type="text" placeholder="Enter inquery id" name="inq_id" class="form-control" value="<%=inquery_array.inq_id%>">
+                        
+                            <label for="customer_id" class=" form-control-label">Customer Id</label>
+                            <input type="text" placeholder="Enter Customer id" name="customer_id" class="form-control" value="<%=inquery_array.customer_id%>">
+                        
+                            <label for="inq_question" class=" form-control-label">inquery Question</label>
+                            <textarea placeholder="Enter inquery Question" name="inq_question" class="form-control"><%=inquery_array.inq_question%></textarea>
+                            
+                            <label for="inq_answer" class=" form-control-label">inquery Answer</label>
+                            <textarea placeholder="Enter inquery Question" name="inq_answer" class="form-control"><%=inquery_array.inq_answer%></textarea>
+                            
+        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                        </form>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+        </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/vendors/js/vendor.bundle.base.js"></script>
+    <script src="/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/js/off-canvas.js"></script>
+    <script src="/js/hoverable-collapse.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="/js/form-validation.js"></script>
+    <script src="/js/bt-maxLength.js"></script>
+    <!-- End custom js for this page-->
+</body>
+    <!-- Mirrored from www.urbanui.com/gleam/pages/forms/validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:19 GMT -->
+    </html>

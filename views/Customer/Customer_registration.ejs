@@ -1,0 +1,124 @@
+<%-include('header')-%>
+<script>
+        function passwordconfirm(){
+        var x=document.forms["registration"]["Customer_password"].value;
+        var y=document.forms["registration"]["Customer_confirm_password"].value;
+        var z=document.forms["registration"]["Customer_contact_no"].value;
+        
+            if(x==y){
+                var phoneno = /[7-9]{1}[0-9]{9}/ ;
+                    if((z.match(phoneno)))
+                    {
+                        alert("Registred Successfully");
+                        return true;
+                    }
+                    else
+                    {
+                    alert("Contact Number should be 10 letters");
+                    return false;
+                    }
+                
+             }
+            else{
+                alert("password don't match");
+               return false;
+            }
+        }
+ </script>
+ <div class="main-panel">
+     <div class="content-wrapper">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="card">
+             <div class="card-body">
+                 <h4 class="card-title">Customer Form</h4>
+                 <form name="registration"  method="POST"   onsubmit="return(passwordconfirm());">
+                        <label for="Customer_id" class=" form-control-label">Customer_id</label>
+                        <input type="text" placeholder="Enter Customer_Id" name="Customer_id" class="form-control" required />
+                        <label for="Customer_name" class=" form-control-label">Customer Name</label>
+                        <input type="text" placeholder="Enter Customer Name" name="Customer_name"class="form-control" required />
+                        
+                        <label for="Customer_contact_no" class=" form-control-label">Contact Number</label>
+                        <input type="text" placeholder="Enter Contact Number" name="Customer_contact_no" class="form-control" required />
+                        
+                        <label for="Customer_email" class=" form-control-label">Email</label>
+                        <input type="email" placeholder="Enter Email" name="Customer_email" class="form-control" required />
+                        
+                        <label for="Customer_address" class=" form-control-label">Customer_address</label>
+                        <textarea type="text" placeholder="Enter your Address" name="Customer_address" class="form-control" required></textarea>
+                        
+                        <label for="Customer_password" class=" form-control-label">Password</label>
+                        <input type="text" name="Customer_password"  placeholder="Enter Password" class="form-control" required />
+                        
+                        <label for="Customer_confirm_password" class=" form-control-label">Confirm Password</label>
+                        <input type="text" name="Customer_confirm_password"placeholder="Confirm Password" class="form-control"  required />
+                        
+                        
+                        <label for="Customer_dob" class=" form-control-label">Date Of Birth</label>
+                        <input type="date"  name="Customer_dob"class="form-control"  required />
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label">Gender</label>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="Customer_gender" value="Male" checked>
+                                    Male
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="radio" class="form-check-input"  name="Customer_gender" id="membershipRadios2" value="Female">
+                                    Female
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                        </form>
+             </div>
+             </div>
+         </div>
+     </div>
+ </div>
+     <!-- content-wrapper ends -->
+     <!-- partial:../../partials/_footer.html -->
+     <footer class="footer">
+ <div class="d-sm-flex justify-content-center justify-content-sm-between">
+         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+ </div>
+     </footer>
+     <!-- partial -->
+ </div>
+ <!-- main-panel ends -->
+ </div>
+ <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="/vendors/js/vendor.bundle.base.js"></script>
+<script src="/vendors/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="/js/off-canvas.js"></script>
+<script src="/js/hoverable-collapse.js"></script>
+<script src="/js/misc.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="/js/form-validation.js"></script>
+<script src="/js/bt-maxLength.js"></script>
+<!-- End custom js for this page-->
+</body>
+<!-- Mirrored from www.urbanui.com/gleam/pages/forms/validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Sep 2018 06:27:19 GMT -->
+</html>
